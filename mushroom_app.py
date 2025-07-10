@@ -1,26 +1,5 @@
 import streamlit as st
-from sklearn.model_selection import train_test_split 
-from sklearn.tree import DecisionTreeClassifier
- 
-import pandas as pd
-
-# Loading the data
-df = pd.read_csv('mushrooms.csv')
-# Cleaning the data
-
-for col in df.columns:
-    df[col] = df[col].astype("category")
-    df[col] = df[col].cat.codes
-
-# Modelling
-X = df.drop("class", axis=1)
-y = df["class"]
-# Split the data for training and testing
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
-# Creating and training the model
-decision_model = DecisionTreeClassifier()
-decision_model.fit(X_train, y_train)
-y_pred = decision_model.predict(X_test)
+from model import decision_model
 
 
 with open("style.css") as f:
