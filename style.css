@@ -1,0 +1,15 @@
+[data-testid = "stAppViewContainer"]{
+    background-image: url("https://cdn.pixabay.com/photo/2022/11/04/20/56/mushroom-7570693_1280.jpg");
+    background-color: rgba(78, 14, 1, 0.34);
+    background-size: auto;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.stButton>button{
+    background-color: rgba(71, 1, 1, 0.977);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: none;
+}
+.stTitle{
+    font-family: 'Trebuchet MS', sans-serif;
+}
